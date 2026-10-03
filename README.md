@@ -69,42 +69,4 @@ This opens a local web dashboard at `http://localhost:8501`. Tick **"Use bundled
 in the sidebar to see a working demo immediately, or uncheck it and upload your own
 `Date, Description, Amount, Reference` CSV files for the bank statement and ledger.
 
-## Running just the engine (no UI), e.g. to show it working in a terminal / viva
 
-```bash
-python3 -c "
-import pandas as pd
-from reconciliation.matcher import reconcile
-
-bank = pd.read_csv('sample_data/bank_statement.csv')
-ledger = pd.read_csv('sample_data/ledger.csv')
-result = reconcile(bank, ledger)
-
-print(result.summary)
-print(result.matched)
-print(result.anomalies)
-"
-```
-
-## What to say about this in a placement interview
-
-- It's a **hybrid AI system**: deterministic rule-based matching for the easy cases (fast, 100%
-  reliable), falling back to a **weighted fuzzy-matching + ML anomaly detection** layer for the
-  hard cases — a realistic design pattern used in real fintech reconciliation tools, not just a
-  toy demo.
-- You can explain **precision/recall trade-offs**: raising `min_confidence` reduces false
-  matches but increases manual review load — a genuine tunable parameter, exposed as a slider
-  in the dashboard.
-- The **Isolation Forest** usage is real unsupervised ML (you can explain how it works: it
-  isolates outliers by randomly partitioning the feature space — outliers get isolated in fewer
-  splits than normal points).
-- It's **extensible**: swapping the fuzzy-matching layer for an embedding-based semantic
-  similarity model (e.g. sentence-transformers) would be the natural "v2" if asked about future
-  improvements.
-
-## Honesty note (for your patent IDF / project report)
-
-This is a working prototype you built and can demo and explain end-to-end. If anyone asks
-whether it's been tested in a real production environment, the honest answer is: it is tested
-against sample/demo data only, not live production bank feeds — same as what's stated in your
-IDF form.
