@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title description">
+  <title id="title">Financial reconciliation dashboard overview</title>
+  <desc id="description">Illustration of the Streamlit dashboard showing upload and matching controls, reconciliation summary metrics, matched transactions, match breakdown, trend chart, review tabs, and Excel export.</desc>
+  <defs>
+    <style>
+      .sans { font-family: 'Arial', sans-serif; }
+      .serif { font-family: Georgia, serif; }
+      .ink { fill: #26372c; }
+      .muted { fill: #718073; }
+      .small { font-size: 14px; }
+      .label { font-size: 16px; font-weight: 600; }
+      .body { font-size: 16px; }
+      .rule { stroke: #dfe8db; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="1440" height="1080" fill="#f4f7f0"/>
+  <rect x="0" y="0" width="306" height="1080" fill="#eaf1e5"/>
+  <line x1="306" y1="0" x2="306" y2="1080" stroke="#dfe8db"/>
+
+  <g class="sans ink">
+    <text x="34" y="54" class="serif" font-size="23" font-weight="700">1. Upload Data</text>
+    <rect x="36" y="78" width="18" height="18" rx="4" fill="#527a50"/>
+    <path d="M40 87l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.4"/>
+    <text x="66" y="93" class="body">Use bundled sample data</text>
+    <text x="36" y="126" class="small muted">Or upload bank and ledger CSVs</text>
+    <text x="34" y="190" class="serif" font-size="23" font-weight="700">2. Matching Settings</text>
+
+    <text x="36" y="235" class="body">Date tolerance (days)</text>
+    <text x="36" y="259" class="small muted">How far apart transaction dates may be</text>
+    <text x="36" y="294" class="small" fill="#527a50">3 days</text>
+    <line x1="38" y1="316" x2="266" y2="316" stroke="#d6e2cc" stroke-width="6" stroke-linecap="round"/>
+    <line x1="38" y1="316" x2="104" y2="316" stroke="#527a50" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="104" cy="316" r="10" fill="#527a50"/>
+
+    <text x="36" y="374" class="body">Amount tolerance (%)</text>
+    <text x="36" y="398" class="small muted">Allow small rounding or fee differences</text>
+    <text x="36" y="433" class="small" fill="#527a50">0.50%</text>
+    <line x1="38" y1="455" x2="266" y2="455" stroke="#d6e2cc" stroke-width="6" stroke-linecap="round"/>
+    <line x1="38" y1="455" x2="95" y2="455" stroke="#527a50" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="95" cy="455" r="10" fill="#527a50"/>
+
+    <text x="36" y="513" class="body">Minimum match confidence</text>
+    <text x="36" y="537" class="small muted">Higher threshold means stricter matching</text>
+    <text x="36" y="572" class="small" fill="#527a50">70%</text>
+    <line x1="38" y1="594" x2="266" y2="594" stroke="#d6e2cc" stroke-width="6" stroke-linecap="round"/>
+    <line x1="38" y1="594" x2="156" y2="594" stroke="#527a50" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="156" cy="594" r="10" fill="#527a50"/>
+
+    <rect x="34" y="638" width="238" height="52" rx="8" fill="#527a50"/>
+    <text x="153" y="671" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Run Reconciliation</text>
+    <text x="36" y="724" class="small muted">Apply changed settings to results</text>
+    <text x="36" y="754" class="small muted">Expected columns: Date, Description,</text>
+    <text x="36" y="776" class="small muted">Amount, Reference</text>
+  </g>
+
+  <g class="sans">
+    <text x="350" y="56" class="serif ink" font-size="34" font-weight="700">AI Financial Reconciliation</text>
+    <text x="350" y="88" class="muted" font-size="17">A clear view of matched transactions, exceptions, and suspicious activity.</text>
+
+    <rect x="350" y="120" width="430" height="178" rx="12" fill="#e2edd9" stroke="#d1e0c9"/>
+    <rect x="350" y="120" width="6" height="178" rx="3" fill="#527a50"/>
+    <text x="382" y="158" fill="#536c52" font-size="14" font-weight="700" letter-spacing="1">MATCH RATE</text>
+    <text x="382" y="224" fill="#294c38" font-family="Georgia, serif" font-size="54" font-weight="700">73.3%</text>
+    <text x="382" y="265" fill="#536c52" font-size="16">11 of 15 bank transactions reconciled</text>
+
+    <g fill="#fffefa" stroke="#dfe8db">
+      <rect x="798" y="120" width="270" height="82" rx="10"/>
+      <rect x="1086" y="120" width="270" height="82" rx="10"/>
+      <rect x="798" y="216" width="270" height="82" rx="10"/>
+      <rect x="1086" y="216" width="270" height="82" rx="10"/>
+    </g>
+    <g class="ink">
+      <text x="820" y="151" class="muted small">Exact Matches</text><text x="820" y="185" font-size="27" font-weight="700">8</text>
+      <text x="1108" y="151" class="muted small">AI Fuzzy Matches</text><text x="1108" y="185" font-size="27" font-weight="700">3</text>
+      <text x="820" y="247" class="muted small">Unmatched (Bank)</text><text x="820" y="281" font-size="27" font-weight="700">4</text>
+      <text x="1108" y="247" class="muted small">Anomalies Flagged</text><text x="1108" y="281" fill="#b85445" font-size="27" font-weight="700">5</text>
+    </g>
+
+    <rect x="350" y="322" width="650" height="365" rx="10" fill="#fffefa" stroke="#dfe8db"/>
+    <text x="374" y="359" class="serif ink" font-size="21" font-weight="700">Recent Matched Transactions</text>
+    <text x="374" y="397" class="muted small">AMAZON WEB SERVICES PAYMENT</text><text x="900" y="397" text-anchor="end" class="ink small" font-weight="700">- ₹4,500.00</text>
+    <text x="374" y="419" class="muted small">2025-01-02 · ref TXN10001</text><rect x="830" y="379" width="57" height="25" rx="5" fill="#e5efe0"/><text x="858" y="396" text-anchor="middle" fill="#3e6545" font-size="12" font-weight="700">Exact</text>
+    <line x1="374" y1="437" x2="974" y2="437" class="rule"/>
+    <text x="374" y="475" class="muted small">SALARY CREDIT JOHN DOE</text><text x="900" y="475" text-anchor="end" fill="#3e6545" class="small" font-weight="700">+ ₹55,000.00</text>
+    <text x="374" y="497" class="muted small">2025-01-03 · ref TXN10002</text><rect x="830" y="457" width="57" height="25" rx="5" fill="#e5efe0"/><text x="858" y="474" text-anchor="middle" fill="#3e6545" font-size="12" font-weight="700">Exact</text>
+    <line x1="374" y1="515" x2="974" y2="515" class="rule"/>
+    <text x="374" y="553" class="muted small">VENDOR PAYMENT - SHARMA TRADERS</text><text x="900" y="553" text-anchor="end" class="ink small" font-weight="700">- ₹12,000.00</text>
+    <text x="374" y="575" class="muted small">2025-01-06 · ref TXN10004</text><rect x="830" y="535" width="57" height="25" rx="5" fill="#e5efe0"/><text x="858" y="552" text-anchor="middle" fill="#3e6545" font-size="12" font-weight="700">Exact</text>
+    <line x1="374" y1="593" x2="974" y2="593" class="rule"/>
+    <text x="374" y="631" class="muted small">OFFICE RENT PAYMENT</text><text x="900" y="631" text-anchor="end" class="ink small" font-weight="700">- ₹25,000.00</text>
+    <text x="374" y="653" class="muted small">2025-01-09 · ref TXN10006</text><rect x="830" y="613" width="57" height="25" rx="5" fill="#e5efe0"/><text x="858" y="630" text-anchor="middle" fill="#3e6545" font-size="12" font-weight="700">Exact</text>
+
+    <rect x="1018" y="322" width="338" height="365" rx="10" fill="#fffefa" stroke="#dfe8db"/>
+    <text x="1042" y="359" class="serif ink" font-size="21" font-weight="700">Match Breakdown</text>
+    <circle cx="1187" cy="495" r="90" fill="none" stroke="#d8dfd4" stroke-width="28"/>
+    <circle cx="1187" cy="495" r="90" fill="none" stroke="#527a50" stroke-width="28" stroke-dasharray="270 566" transform="rotate(-90 1187 495)"/>
+    <circle cx="1187" cy="495" r="90" fill="none" stroke="#7294a4" stroke-width="28" stroke-dasharray="102 566" stroke-dashoffset="-270" transform="rotate(-90 1187 495)"/>
+    <text x="1187" y="493" text-anchor="middle" class="ink" font-size="27" font-weight="700">73.3%</text>
+    <text x="1187" y="519" text-anchor="middle" class="muted small">matched</text>
+    <circle cx="1060" cy="628" r="6" fill="#527a50"/><text x="1073" y="633" class="muted small">Exact</text>
+    <circle cx="1151" cy="628" r="6" fill="#7294a4"/><text x="1164" y="633" class="muted small">AI Fuzzy</text>
+    <circle cx="1272" cy="628" r="6" fill="#d8dfd4"/><text x="1285" y="633" class="muted small">Unmatched</text>
+
+    <rect x="350" y="711" width="1006" height="182" rx="10" fill="#fffefa" stroke="#dfe8db"/>
+    <text x="374" y="749" class="serif ink" font-size="21" font-weight="700">Reconciliation Trend - Cumulative Matched Value</text>
+    <line x1="402" y1="850" x2="1328" y2="850" stroke="#dfe8db"/>
+    <line x1="402" y1="800" x2="1328" y2="800" stroke="#edf1e9"/>
+    <line x1="402" y1="775" x2="1328" y2="775" stroke="#edf1e9"/>
+    <path d="M430 837 L570 820 L710 802 L850 790 L990 770 L1130 755 L1270 730 L1270 850 L430 850 Z" fill="#527a50" opacity="0.10"/>
+    <path d="M430 837 L570 820 L710 802 L850 790 L990 770 L1130 755 L1270 730" fill="none" stroke="#527a50" stroke-width="4"/>
+    <g fill="#527a50"><circle cx="430" cy="837" r="5"/><circle cx="570" cy="820" r="5"/><circle cx="710" cy="802" r="5"/><circle cx="850" cy="790" r="5"/><circle cx="990" cy="770" r="5"/><circle cx="1130" cy="755" r="5"/><circle cx="1270" cy="730" r="5"/></g>
+    <text x="405" y="873" class="muted small">Jan 5</text><text x="815" y="873" class="muted small">Jan 15</text><text x="1250" y="873" class="muted small">Jan 28</text>
+
+    <rect x="350" y="917" width="1006" height="116" rx="10" fill="#fffefa" stroke="#dfe8db"/>
+    <g font-size="15" font-weight="600">
+      <text x="374" y="953" fill="#3e6545">Unmatched - Bank</text><text x="550" y="953" class="muted">Unmatched - Ledger</text><text x="754" y="953" class="muted">Anomalies</text><text x="874" y="953" class="muted">Export</text>
+    </g>
+    <line x1="370" y1="966" x2="506" y2="966" stroke="#527a50" stroke-width="3"/>
+    <line x1="374" y1="983" x2="1332" y2="983" class="rule"/>
+    <text x="374" y="1013" class="muted small">Review unmatched records and flagged anomalies, or download the report as an Excel workbook.</text>
+  </g>
+</svg>

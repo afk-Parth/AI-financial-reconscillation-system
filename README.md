@@ -8,6 +8,20 @@ are flagged for human review.
 This matches the architecture described in the patent IDF:
 `Data Sources → Ingestion → Preprocessing → AI Matching Engine → Anomaly Detection → Dashboard`.
 
+## Streamlit dashboard walkthrough
+
+The illustration below shows the main dashboard sections using the bundled sample data.
+
+![Illustrated overview of the financial reconciliation Streamlit dashboard](docs/images/dashboard-overview.svg)
+
+- **Upload Data** — use the included demo CSVs or upload a bank statement and ledger of your own.
+- **Matching Settings** — set the allowed date difference, amount variance, and minimum confidence for fuzzy matches. Click **Run Reconciliation** to apply changed settings.
+- **Match Rate and summary metrics** — see the percentage of bank transactions reconciled, with counts for exact matches, AI fuzzy matches, unmatched bank entries, and flagged anomalies.
+- **Recent Matched Transactions** — review matched bank entries, dates, references, amounts, and whether each match was exact or fuzzy.
+- **Match Breakdown** — compare exact, fuzzy, and unmatched bank transactions at a glance.
+- **Reconciliation Trend** — follow the cumulative value of matched transactions over time.
+- **Review and Export tabs** — inspect unmatched bank entries, unmatched ledger entries, and anomalies; use the Export tab to download the complete report as an Excel workbook.
+
 ## How the matching actually works (no black box)
 
 1. **Exact pass** — transactions with identical amount + identical date are auto-matched
